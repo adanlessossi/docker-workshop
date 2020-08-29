@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("api/todo")
+@RequestMapping("/api/todo")
 public class TodoController {
 
     private TodoServiceDefinition todoService;
@@ -31,7 +31,7 @@ public class TodoController {
     }
 
     @GetMapping("/{id}")
-    public TodoDto getById(@PathVariable String username, @PathVariable UUID id) {
+    public TodoDto getById(@PathVariable UUID id) {
         return todoService.getById(id);
     }
 

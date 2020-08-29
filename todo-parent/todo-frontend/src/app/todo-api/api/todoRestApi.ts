@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 export namespace todoApi {
 
   export interface TodoDto {
-    username: string;
+    assignee: string;
     description: string;
     targetDate: Moment;
     isDone: boolean;

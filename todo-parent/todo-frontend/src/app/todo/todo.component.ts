@@ -24,7 +24,7 @@ export class TodoComponent implements OnInit {
     if (this.id){
       this.todoService.getById(this.id).subscribe(todo => {
         this.todo = todo;
-      })
+      });
     }
 
     this.todoService.getAllTodos().subscribe(todos => {

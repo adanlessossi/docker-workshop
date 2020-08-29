@@ -3,10 +3,7 @@ package com.togojug.workshop.todo.domain;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.UUID;
 
@@ -23,11 +20,15 @@ public class Todo {
     @GeneratedValue
     private UUID id;
 
+    @Column(name = "assignee")
     private String assignee;
 
+    @Column(name = "description")
     private String description;
 
+    @Column(name = "target_date")
     private Date targetDate;
 
+    @Column(name = "is_done")
     private boolean isDone;
 }
